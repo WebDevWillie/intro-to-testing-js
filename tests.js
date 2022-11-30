@@ -41,3 +41,10 @@ describe('sayHello', function (){
     });
 })
 
+describe("isFive", function (){
+    it('should be a defined function', function () {
+        expect(typeof isFive).toBe("function");
+    });
+})
+
+
