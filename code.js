@@ -18,10 +18,12 @@ function sayHello(input){
 }
 
 function isFive(input){
-    if(input == 5){
-        return true;
-    }else{
-        return (true);
+    if(input === "boolean"){
+        return "boolean";
+    }else if(input == 5) {
+        return true
+    } else {
+        return false;
     }
 
 
@@ -37,6 +39,27 @@ function isEven(input){
 
 function isVowel(input){
 
+    if (input === null || input === undefined){
+        return false
+    } else if(input.toString().toLowerCase() === "a" || input.toString().toLowerCase() ==="e" || input.toString().toLowerCase() === "i" || input.toString().toLowerCase() === "o" || input.toString().toLowerCase() === "u"){
+        return true;
+    } else {
+        return false;
+    }
 }
+
+function add(input1, input2){
+    if(input1 == NaN || input2 == NaN) {
+        return NaN
+    } else{
+        return (parseFloat(input1) + parseFloat(input2));
+    }
+
+    }
+
+
+
+
+
 
 
