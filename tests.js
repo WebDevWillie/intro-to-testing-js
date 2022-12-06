@@ -47,7 +47,7 @@ describe("isFive", function (){
         expect(typeof isFive).toBe("function");
     });
     it('should return a boolean no matter the input', function (){
-        expect(isFive()).toBe("boolean");
+        expect(typeof isFive()).toBe("boolean");
     });
     it('should return true if passed the number 5', function (){
         expect(isFive(5)).toBe(true);
@@ -62,7 +62,7 @@ describe("isEven", function (){
         expect(typeof isEven).toBe("function");
     });
     it('should return a boolean no matter the input', function (){
-        expect(isEven()).toBe(true);
+        expect(typeof isEven()).toBe("boolean");
     });
     it('should return true with isEven(2)', function(){
         expect(isEven(2)).toBe(true);
@@ -83,7 +83,7 @@ describe("isEven", function (){
         expect(isEven(Infinity)).toBe(false);
     });
     it('should return true when executed with isEven(True)', function(){
-        expect(isEven(true)).toBe(false);
+        expect(isEven(true)).toBe(true);
     });
     it('should return false when executed with isEven(False)', function(){
         expect(isEven(false)).toBe(false);
@@ -135,7 +135,7 @@ describe("add", function(){
         expect(add("-4",10)).toBe(6);
     })
     it("should return NaN when executing add('banana','split')", function(){
-        expect(add("banana","split")).toBe(NaN);
+        expect(isNaN(add("banana","split"))).toBe(true);
     })
 
 })

@@ -18,19 +18,20 @@ function sayHello(input){
 }
 
 function isFive(input){
-    if(input === "boolean"){
-        return "boolean";
+    if(typeof input === "boolean"){
+        return input;
     }else if(input == 5) {
         return true
     } else {
         return false;
     }
 
-
 }
 
 function isEven(input){
-    if(parseFloat(input) % 2 === 0) {
+    if(typeof input === "boolean"){
+        return input;
+    } else if(parseFloat(input) % 2 === 0) {
         return true;
     } else {
         return false;
@@ -49,13 +50,9 @@ function isVowel(input){
 }
 
 function add(input1, input2){
-    if(input1 == NaN || input2 == NaN) {
-        return NaN
-    } else{
-        return (parseFloat(input1) + parseFloat(input2));
+    return (parseFloat(input1) + parseFloat(input2));ß
     }
 
-    }
 
 
 
